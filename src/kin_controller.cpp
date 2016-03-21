@@ -30,7 +30,7 @@ int main(int argc, char **argv){
     
     pub_left = node.advertise<std_msgs::Float64>("/vrep/vehicle/motorLeftSpeed", 1);
     
-    ros::Subscriber sub = node.subscribe("/cmd_vel", 1, fcnCallback); 
+    ros::Subscriber sub = node.subscribe("topic_carrot_chasing", 1, fcnCallback); 
     
     ros::spin();
     return 0;
